@@ -1,0 +1,11 @@
+language: generic
+sudo: 'required'
+services:
+  - 'docker'
+
+deploy:
+  provider: script
+  script: ./.ci-docker.sh
+  on:
+    tags: true
+  skip_cleanup: true
